@@ -1,0 +1,9 @@
+dependencies:
+  - name: ResponsiveGuides
+    version: 0.1.0
+    src: htmlwidgets/lib/ResponsiveGuides
+    script:
+      - ResponsiveGuides.js
+      - chroma.min.js
+    stylesheet:
+      - ResponsiveGuides.css
