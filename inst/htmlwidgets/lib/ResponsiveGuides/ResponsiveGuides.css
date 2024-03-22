@@ -61,3 +61,116 @@
     font-size: 15px;
     line-height: 18px;
 }
+
+.ResponsiveGuides___continuousGuide {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.column .ResponsiveGuides___continuousGuide {
+    flex-direction: row;
+}
+
+.row .ResponsiveGuides___continuousGuide {
+    flex-direction: column;
+}
+
+.ResponsiveGuides___rampDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.column .ResponsiveGuides___rampDiv {
+    flex-direction: column;
+    width: 18px;
+    height: 100%;
+}
+
+.row .ResponsiveGuides___rampDiv {
+    flex-direction: row;
+    width: 100%;
+    height: 18px;
+}
+
+.column .ResponsiveGuides___rampSegment {
+    width: 100%;
+    height: 1px;
+}
+
+.row .ResponsiveGuides___rampSegment {
+    width: 1px;
+    height: 100%;
+}
+
+.column .ResponsiveGuides___rampLabelDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.column .ResponsiveGuides___rampLabel {
+    position: relative;
+}
+
+.column .ResponsiveGuides___rampLabel:first-child {
+    transform: translateY(-50%);
+}
+
+.column .ResponsiveGuides___rampLabel:last-child {
+    transform: translateY(50%);
+}
+
+.column .ResponsiveGuides___rampLabel::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    width: 5px;
+    height: 1px;
+    background-color: black;
+}
+
+.row .ResponsiveGuides___rampLabelDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row .ResponsiveGuides___rampLabel {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.row .ResponsiveGuides___rampLabel::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    width: 1px;
+    height: 5px;
+    background-color: black;
+}
+
+.row .ResponsiveGuides___rampLabel:first-child {
+    justify-content: flex-start;
+}
+
+.row .ResponsiveGuides___rampLabel:first-child::before {
+    left: 0;
+}
+
+.row .ResponsiveGuides___rampLabel:last-child {
+    justify-content: flex-end;
+}
+
+.row .ResponsiveGuides___rampLabel:last-child::before {
+    left: 100%;
+}

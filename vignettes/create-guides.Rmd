@@ -35,3 +35,7 @@ head(colors)
 responsiveGuide(variables, manual_colors = colors)
 ```
 
+```{r}
+responsiveGuide(seq(100), manual_colors = c("red", "blue"), direction = "row")
+```
+

@@ -2,13 +2,14 @@
 #' @export
 responsiveGuide <- function(
   variables,
-  colorscale = NULL,
+  color_scale = NULL,
   manual_colors = NULL,
-  nbreaks = 3,
+  ramp_levels = 100,
   direction = "column",
   focused = NULL,
   width = NULL,
-  height = NULL
+  height = NULL,
+  ...
 ) {
 
   if (is.null(scale) & is.null(manual_colors)) {
@@ -18,7 +19,7 @@ responsiveGuide <- function(
   # check if variables is continuous or discrete
   if (is.numeric(variables)) {
     scale <- "continuous"
-    breaks <- pretty(variables, n = nbreaks)
+    breaks <- pretty(variables, n = 3)
   } else {
     scale <- "discrete"
     variables <- as.factor(variables)
@@ -31,6 +32,12 @@ responsiveGuide <- function(
         stop("All levels of the variable must be present in the manual colors")
       }
       colors <- unname(manual_colors[breaks])
+    } else if (scale == "continuous") {
+      if (length(manual_colors) < 2) {
+        stop("At least two colors must be provided for a continuous scale")
+      }
+        pal <- colorRampPalette(manual_colors)
+        colors <- pal(ramp_levels)
     }
   }
 

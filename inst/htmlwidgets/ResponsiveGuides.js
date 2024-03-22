@@ -39,9 +39,35 @@ HTMLWidgets.widget({
             guide.appendChild(label);
             guideDiv.appendChild(guide);
           }
-          el.appendChild(guideDiv);
+        } else {
+          let continuousGuide = document.createElement('div');
+          continuousGuide.className = 'ResponsiveGuides___continuousGuide';
+          let rampDiv = document.createElement('div');
+          rampDiv.className = 'ResponsiveGuides___rampDiv';
+          for (let i = 0; i < x.colors.length; i++) {
+            let rampSegment = document.createElement('div');
+            rampSegment.className = 'ResponsiveGuides___rampSegment';
+            rampSegment.style.backgroundColor = x.colors[i];
+            rampDiv.appendChild(rampSegment);
+          }
+          continuousGuide.appendChild(rampDiv);
+          let rampLabelDiv = document.createElement('div');
+          rampLabelDiv.className = 'ResponsiveGuides___rampLabelDiv';
+          if (x.direction == "column") {
+            rampLabelDiv.style.height = x.colors.length + 'px';
+          } else {
+            rampLabelDiv.style.width = x.colors.length + 'px';
+          }
+          for (let i = 0; i < x.breaks.length; i++) {
+            let rampLabel = document.createElement('div');
+            rampLabel.className = 'ResponsiveGuides___rampLabel';
+            rampLabel.innerHTML = x.breaks[i];
+            rampLabelDiv.appendChild(rampLabel);
+          }
+          continuousGuide.appendChild(rampLabelDiv);
+          guideDiv.appendChild(continuousGuide);
         }
-
+        el.appendChild(guideDiv);
       },
 
       resize: function(width, height) {
