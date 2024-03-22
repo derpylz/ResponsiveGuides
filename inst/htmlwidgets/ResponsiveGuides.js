@@ -12,6 +12,7 @@ HTMLWidgets.widget({
 
       renderValue: function(x) {
 
+        el.innerHTML = '';
         let id = el.id;
         let container = document.createElement('div');
         container.className = 'ResponsiveGuides___container';
