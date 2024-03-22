@@ -14,6 +14,8 @@ HTMLWidgets.widget({
 
         el.innerHTML = '';
         let id = el.id;
+        el.style.width = width;
+        el.style.height = height;
         let container = document.createElement('div');
         container.className = 'ResponsiveGuides___container';
         container.classList.add('ResponsiveGuides___' + x.direction);
@@ -80,7 +82,8 @@ HTMLWidgets.widget({
 
       resize: function(width, height) {
 
-        // TODO: code to re-render the widget with a new size
+        el.style.width = width;
+        el.style.height = height;
 
       }
 
