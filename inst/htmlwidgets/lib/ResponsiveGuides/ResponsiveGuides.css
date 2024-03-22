@@ -13,12 +13,12 @@
     gap: 15px;
 }
 
-.ResponsiveGuides___container.column {
+.ResponsiveGuides___container.ResponsiveGuides___column {
     flex-direction: row;
     height: 100%;
 }
 
-.ResponsiveGuides___container.row {
+.ResponsiveGuides___container.ResponsiveGuides___row {
     flex-direction: column;
 }
 
@@ -36,12 +36,12 @@
     gap: 5px;
 }
 
-.column .ResponsiveGuides___guideDiv {
+.ResponsiveGuides___column .ResponsiveGuides___guideDiv {
     flex-direction: column;
     height: 100%;
 }
 
-.row .ResponsiveGuides___guideDiv {
+.ResponsiveGuides___row .ResponsiveGuides___guideDiv {
     flex-direction: row;
     width: 100%;
 }
@@ -92,11 +92,11 @@
     gap: 5px;
 }
 
-.column .ResponsiveGuides___continuousGuide {
+.ResponsiveGuides___column .ResponsiveGuides___continuousGuide {
     flex-direction: row;
 }
 
-.row .ResponsiveGuides___continuousGuide {
+.ResponsiveGuides___row .ResponsiveGuides___continuousGuide {
     flex-direction: column;
 }
 
@@ -105,48 +105,48 @@
     justify-content: center;
 }
 
-.column .ResponsiveGuides___rampDiv {
+.ResponsiveGuides___column .ResponsiveGuides___rampDiv {
     flex-direction: column;
     width: 18px;
     height: 100%;
 }
 
-.row .ResponsiveGuides___rampDiv {
+.ResponsiveGuides___row .ResponsiveGuides___rampDiv {
     flex-direction: row;
     width: 100%;
     height: 18px;
 }
 
-.column .ResponsiveGuides___rampSegment {
+.ResponsiveGuides___column .ResponsiveGuides___rampSegment {
     width: 100%;
     height: 1px;
 }
 
-.row .ResponsiveGuides___rampSegment {
+.ResponsiveGuides___row .ResponsiveGuides___rampSegment {
     width: 1px;
     height: 100%;
 }
 
-.column .ResponsiveGuides___rampLabelDiv {
+.ResponsiveGuides___column .ResponsiveGuides___rampLabelDiv {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.column .ResponsiveGuides___rampLabel {
+.ResponsiveGuides___column .ResponsiveGuides___rampLabel {
     position: relative;
 }
 
-.column .ResponsiveGuides___rampLabel:first-child {
+.ResponsiveGuides___column .ResponsiveGuides___rampLabel:first-child {
     transform: translateY(-50%);
 }
 
-.column .ResponsiveGuides___rampLabel:last-child {
+.ResponsiveGuides___column .ResponsiveGuides___rampLabel:last-child {
     transform: translateY(50%);
 }
 
-.column .ResponsiveGuides___rampLabel::before {
+.ResponsiveGuides___column .ResponsiveGuides___rampLabel::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -156,21 +156,21 @@
     background-color: black;
 }
 
-.row .ResponsiveGuides___rampLabelDiv {
+.ResponsiveGuides___row .ResponsiveGuides___rampLabelDiv {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
 }
 
-.row .ResponsiveGuides___rampLabel {
+.ResponsiveGuides___row .ResponsiveGuides___rampLabel {
     flex: 1;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
-.row .ResponsiveGuides___rampLabel::before {
+.ResponsiveGuides___row .ResponsiveGuides___rampLabel::before {
     content: "";
     position: absolute;
     top: -5px;
@@ -180,18 +180,18 @@
     background-color: black;
 }
 
-.row .ResponsiveGuides___rampLabel:first-child {
+.ResponsiveGuides___row .ResponsiveGuides___rampLabel:first-child {
     justify-content: flex-start;
 }
 
-.row .ResponsiveGuides___rampLabel:first-child::before {
+.ResponsiveGuides___row .ResponsiveGuides___rampLabel:first-child::before {
     left: 0;
 }
 
-.row .ResponsiveGuides___rampLabel:last-child {
+.ResponsiveGuides___row .ResponsiveGuides___rampLabel:last-child {
     justify-content: flex-end;
 }
 
-.row .ResponsiveGuides___rampLabel:last-child::before {
+.ResponsiveGuides___row .ResponsiveGuides___rampLabel:last-child::before {
     left: 100%;
 }

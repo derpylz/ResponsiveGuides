@@ -16,7 +16,7 @@ HTMLWidgets.widget({
         let id = el.id;
         let container = document.createElement('div');
         container.className = 'ResponsiveGuides___container';
-        container.classList.add(x.direction);
+        container.classList.add('ResponsiveGuides___' + x.direction);
         let title = document.createElement('div');
         title.className = 'ResponsiveGuides___title';
         title.innerText = x.title;
