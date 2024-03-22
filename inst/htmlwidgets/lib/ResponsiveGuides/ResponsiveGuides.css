@@ -6,9 +6,28 @@
     overflow: auto;
 }
 
-.ResponsiveGuides___guideDiv {
+.ResponsiveGuides___container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.ResponsiveGuides___container.column {
+    flex-direction: row;
     height: 100%;
-    width: 100%;
+}
+
+.ResponsiveGuides___container.row {
+    flex-direction: column;
+}
+
+.ResponsiveGuides___title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.ResponsiveGuides___guideDiv {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -17,12 +36,14 @@
     gap: 5px;
 }
 
-.ResponsiveGuides___guideDiv.column {
+.column .ResponsiveGuides___guideDiv {
     flex-direction: column;
+    height: 100%;
 }
 
-.ResponsiveGuides___guideDiv.row {
+.row .ResponsiveGuides___guideDiv {
     flex-direction: row;
+    width: 100%;
 }
 
 .ResponsiveGuides___guide {

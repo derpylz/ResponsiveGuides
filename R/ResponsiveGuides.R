@@ -1,15 +1,16 @@
 #' @import htmlwidgets
 #' @export
 responsiveGuide <- function(
-  variables,
-  color_scale = NULL,
-  manual_colors = NULL,
-  ramp_levels = 100,
-  direction = "column",
-  focused = NULL,
-  width = NULL,
-  height = NULL,
-  ...
+    variables,
+    color_scale = NULL,
+    manual_colors = NULL,
+    ramp_levels = 100,
+    title = NULL,
+    direction = "column",
+    focused = NULL,
+    width = NULL,
+    height = NULL,
+    ...
 ) {
 
   if (is.null(scale) & is.null(manual_colors)) {
@@ -36,8 +37,8 @@ responsiveGuide <- function(
       if (length(manual_colors) < 2) {
         stop("At least two colors must be provided for a continuous scale")
       }
-        pal <- colorRampPalette(manual_colors)
-        colors <- pal(ramp_levels)
+      pal <- colorRampPalette(manual_colors)
+      colors <- pal(ramp_levels)
     }
   }
 
@@ -48,7 +49,8 @@ responsiveGuide <- function(
       scale = scale,
       colors = colors,
       direction = direction,
-      focused = focused
+      focused = focused,
+      title = title
     ),
     width = width,
     height = height,

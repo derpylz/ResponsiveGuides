@@ -13,10 +13,16 @@ HTMLWidgets.widget({
       renderValue: function(x) {
 
         let id = el.id;
+        let container = document.createElement('div');
+        container.className = 'ResponsiveGuides___container';
+        container.classList.add(x.direction);
+        let title = document.createElement('div');
+        title.className = 'ResponsiveGuides___title';
+        title.innerText = x.title;
+        container.appendChild(title);
         let guideDiv = document.createElement('div');
         guideDiv.id = 'guideDiv-' + id;
         guideDiv.className = 'ResponsiveGuides___guideDiv';
-        guideDiv.classList.add(x.direction);
         if (x.scale == 'discrete') {
           breaks = x.breaks;
           colors = x.colors;
@@ -29,7 +35,7 @@ HTMLWidgets.widget({
             guide.appendChild(colorBox);
             let label = document.createElement('div');
             label.className = 'ResponsiveGuides___label';
-            label.innerHTML = breaks[i];
+            label.innerText = breaks[i];
             if (breaks[i] == x.focused) {
               guide.classList.add('focused');
               if (chroma(colors[i]).luminance() < 0.5) {
@@ -61,13 +67,14 @@ HTMLWidgets.widget({
           for (let i = 0; i < x.breaks.length; i++) {
             let rampLabel = document.createElement('div');
             rampLabel.className = 'ResponsiveGuides___rampLabel';
-            rampLabel.innerHTML = x.breaks[i];
+            rampLabel.innerText = x.breaks[i];
             rampLabelDiv.appendChild(rampLabel);
           }
           continuousGuide.appendChild(rampLabelDiv);
           guideDiv.appendChild(continuousGuide);
         }
-        el.appendChild(guideDiv);
+        container.appendChild(guideDiv);
+        el.appendChild(container);
       },
 
       resize: function(width, height) {
