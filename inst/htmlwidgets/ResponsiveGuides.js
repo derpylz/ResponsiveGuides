@@ -16,6 +16,7 @@ HTMLWidgets.widget({
         let guideDiv = document.createElement('div');
         guideDiv.id = 'guideDiv-' + id;
         guideDiv.className = 'ResponsiveGuides___guideDiv';
+        guideDiv.classList.add(x.direction);
         if (x.scale == 'discrete') {
           breaks = x.breaks;
           colors = x.colors;
@@ -29,6 +30,12 @@ HTMLWidgets.widget({
             let label = document.createElement('div');
             label.className = 'ResponsiveGuides___label';
             label.innerHTML = breaks[i];
+            if (breaks[i] == x.focused) {
+              guide.classList.add('focused');
+              if (chroma(colors[i]).luminance() < 0.5) {
+                label.style.color = 'white';
+              }
+            }
             guide.appendChild(label);
             guideDiv.appendChild(guide);
           }

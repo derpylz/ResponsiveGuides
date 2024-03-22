@@ -1,6 +1,15 @@
 #' @import htmlwidgets
 #' @export
-responsiveGuide <- function(variables, colorscale = NULL, manual_colors = NULL, nbreaks = 3, width = NULL, height = NULL) {
+responsiveGuide <- function(
+  variables,
+  colorscale = NULL,
+  manual_colors = NULL,
+  nbreaks = 3,
+  direction = "column",
+  focused = NULL,
+  width = NULL,
+  height = NULL
+) {
 
   if (is.null(scale) & is.null(manual_colors)) {
     stop("You must provide either a color scale or manual colors")
@@ -27,7 +36,13 @@ responsiveGuide <- function(variables, colorscale = NULL, manual_colors = NULL, 
 
   htmlwidgets::createWidget(
     name = "ResponsiveGuides",
-    x = list(breaks = breaks, scale = scale, colors = colors),
+    x = list(
+      breaks = breaks,
+      scale = scale,
+      colors = colors,
+      direction = direction,
+      focused = focused
+    ),
     width = width,
     height = height,
     package = "ResponsiveGuides"

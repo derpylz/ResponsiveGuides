@@ -1,4 +1,63 @@
+.ResponsiveGuides {
+    width: 100% !important;
+    height: 100% !important;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    overflow: auto;
+}
+
+.ResponsiveGuides___guideDiv {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    align-content: space-between;
+    gap: 5px;
+}
+
+.ResponsiveGuides___guideDiv.column {
+    flex-direction: column;
+}
+
+.ResponsiveGuides___guideDiv.row {
+    flex-direction: row;
+}
+
+.ResponsiveGuides___guide {
+    position: relative;
+}
+
+.ResponsiveGuides___guide.focused {
+    font-weight: bold;
+}
+
 .ResponsiveGuides___colorBox {
-    width: 10px;
-    height: 10px;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    z-index: -1;
+}
+
+.focused .ResponsiveGuides___colorBox {
+    width: 100%;
+    animation: focus_animation 0.5s ease-in-out forwards;
+}
+
+@keyframes focus_animation {
+    0% {
+        width: 18px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.ResponsiveGuides___label {
+    margin-left: 18px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 15px;
+    line-height: 18px;
 }

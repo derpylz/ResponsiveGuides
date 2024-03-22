@@ -1,12 +1,15 @@
 Package: ResponsiveGuides
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Create Simple Responsive Guides for Shiny Apps
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Author: Nils Trost <nils@explanationmark.de>
+Maintainer: Nils Trost <nils@explanationmark.de>
+Description: Create guides for plots in Shiny apps that fit nicely within the size of the container element.
+License: MIT
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.3.1
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr

@@ -1,0 +1,37 @@
+---
+title: "create-guides"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{create-guides}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(RColorBrewer)
+library(ResponsiveGuides)
+```
+
+```{r}
+variables <- paste("label", seq(20))
+variables <- factor(variables, levels = variables)
+colors <- setNames(
+  colorRampPalette(RColorBrewer::brewer.pal(9, "Set1"))(20),
+  levels(variables)
+)
+
+head(variables)
+head(colors)
+```
+
+```{r}
+responsiveGuide(variables, manual_colors = colors)
+```
+
