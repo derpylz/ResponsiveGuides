@@ -61,10 +61,10 @@ responsiveGuide <- function(
 
 #' @export
 ResponsiveGuidesOutput <- function(outputId, width = "100%", height = "400px") {
-  shinyWidgetOutput(outputId, "ResponsiveGuides", width, height, package = "ResponsiveGuides")
+  htmlwidgets::shinyWidgetOutput(outputId, "ResponsiveGuides", width, height, package = "ResponsiveGuides")
 }
 #' @export
 renderResponsiveGuides <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  shinyRenderWidget(expr, ResponsiveGuidesOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, ResponsiveGuidesOutput, env, quoted = TRUE)
 }
