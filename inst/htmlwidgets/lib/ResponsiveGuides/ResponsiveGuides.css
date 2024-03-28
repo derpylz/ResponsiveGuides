@@ -8,7 +8,7 @@
 
 .ResponsiveGuides___container {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 15px;
 }
@@ -59,6 +59,7 @@
     width: 18px;
     height: 18px;
     z-index: -1;
+    border-radius: 9px;
 }
 
 .focused .ResponsiveGuides___colorBox {
@@ -69,9 +70,11 @@
 @keyframes focus_animation {
     0% {
         width: 18px;
+        border-radius: 9px 9px 9px 9px;
     }
     100% {
         width: 100%;
+        border-radius: 9px 0 0 9px;
     }
 }
 

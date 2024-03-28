@@ -20,7 +20,7 @@ responsiveGuide <- function(
   # check if variables is continuous or discrete
   if (is.numeric(variables)) {
     scale <- "continuous"
-    breaks <- pretty(variables, n = 3)
+    breaks <- round(pretty(variables, n = 2), digits = 3)
   } else {
     scale <- "discrete"
     variables <- as.factor(variables)
