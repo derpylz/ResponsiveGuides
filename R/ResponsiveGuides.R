@@ -1,16 +1,16 @@
 #' @import htmlwidgets
 #' @export
 responsiveGuide <- function(
-    variables,
-    color_scale = NULL,
-    manual_colors = NULL,
-    ramp_levels = 100,
-    title = NULL,
-    direction = "column",
-    focused = NULL,
-    width = NULL,
-    height = NULL,
-    ...
+  variables,
+  color_scale = NULL,
+  manual_colors = NULL,
+  ramp_levels = 100,
+  title = NULL,
+  direction = "column",
+  focused = NULL,
+  width = NULL,
+  height = NULL,
+  ...
 ) {
 
   if (is.null(scale) & is.null(manual_colors)) {
