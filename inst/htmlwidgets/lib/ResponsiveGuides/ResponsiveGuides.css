@@ -12,6 +12,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    padding: 20px;
 }
 
 .ResponsiveGuides___container.ResponsiveGuides___column {
