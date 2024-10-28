@@ -19,6 +19,7 @@ HTMLWidgets.widget({
         let container = document.createElement('div');
         container.className = 'ResponsiveGuides___container';
         container.classList.add('ResponsiveGuides___' + x.direction);
+        container.classList.add('ResponsiveGuides___' + x.justify);
         let title = document.createElement('div');
         title.className = 'ResponsiveGuides___title';
         title.innerText = x.title;

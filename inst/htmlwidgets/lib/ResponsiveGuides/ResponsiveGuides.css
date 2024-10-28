@@ -15,6 +15,23 @@
     padding: 20px;
 }
 
+.ResponsiveGuides___container.ResponsiveGuides___left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.ResponsiveGuides___container.ResponsiveGuides___right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+
 .ResponsiveGuides___container.ResponsiveGuides___column {
     flex-direction: row;
     height: 100%;
@@ -27,10 +44,12 @@
 .ResponsiveGuides___title {
     font-size: 20px;
     font-weight: bold;
+    min-width: 0;
 }
 
 .ResponsiveGuides___guideDiv {
     display: flex;
+    min-width: 0;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: flex-start;

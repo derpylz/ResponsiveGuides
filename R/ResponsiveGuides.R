@@ -7,6 +7,7 @@ responsiveGuide <- function(
   ramp_levels = 100,
   title = NULL,
   direction = "column",
+  justify = "center",
   focused = NULL,
   width = NULL,
   height = NULL,
@@ -49,6 +50,7 @@ responsiveGuide <- function(
       scale = scale,
       colors = colors,
       direction = direction,
+      justify = justify,
       focused = focused,
       title = title
     ),
