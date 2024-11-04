@@ -1,4 +1,18 @@
+#' Responsive Guides - An htmlwidget for displaying plot guides
+#'
 #' @import htmlwidgets
+#'
+#' @param variables A vector of values to be displayed. Either continuous or discrete.
+#' @param color_scale A color scale to use for the guide. If NULL, manual_colors must be provided.
+#' @param manual_colors A named vector of colors to use for the guide. If NULL, color_scale must be provided.
+#' @param ramp_levels The number of colors breaks used to display a continuous color ramp.
+#' @param title The title of the guide.
+#' @param direction The orientation of the guide. Either "row" or "column".
+#' @param justify The alignment of the guide. Either "left", "center", or "right".
+#' @param focused The value to highlight in the guide, useful if used interactively.
+#' @param width The width of the widget.
+#' @param height The height of the widget.
+#'
 #' @export
 responsiveGuide <- function(
   variables,
@@ -14,7 +28,7 @@ responsiveGuide <- function(
   ...
 ) {
 
-  if (is.null(scale) & is.null(manual_colors)) {
+  if (is.null(scale) && is.null(manual_colors)) {
     stop("You must provide either a color scale or manual colors")
   }
 
